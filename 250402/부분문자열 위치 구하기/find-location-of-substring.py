@@ -5,7 +5,7 @@ target_str = input()
 
 idx = -1
 
-for i in range(len(input_str) - len(target_str)):
+for i in range(len(input_str) - len(target_str)+1):
     div_str = input_str[i:i+len(target_str)]
     if div_str == target_str :
         idx = i
