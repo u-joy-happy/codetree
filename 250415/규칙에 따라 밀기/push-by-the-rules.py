@@ -6,13 +6,10 @@ r_cnt = q.count('R')
 cnt = 0
 
 if l_cnt > r_cnt :
-    cnt = l_cnt - r_cnt
+    cnt = (l_cnt - r_cnt) % len(a)
     a = a[cnt:] + a[:cnt]
 elif r_cnt > l_cnt :
-    cnt = r_cnt - l_cnt
+    cnt = (r_cnt - l_cnt) % len(a)
     a = a[-cnt:] + a[:-cnt] 
 
 print(a)
-
-
-
