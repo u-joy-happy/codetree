@@ -3,10 +3,11 @@ A = list(map(int, input().split()))
 
 # Please write your code here.
 
-def div_and_sum(a, n, m):
+def div_and_sum():
+    global n, m
     tot = 0
     for _ in range(n) :
-        tot += a[m-1]
+        tot += A[m-1]
 
         if m == 1 :
             break
@@ -18,4 +19,4 @@ def div_and_sum(a, n, m):
         
     return tot
 
-print(div_and_sum(A, n, m))
+print(div_and_sum())
