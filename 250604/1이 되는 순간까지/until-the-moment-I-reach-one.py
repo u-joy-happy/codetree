@@ -2,20 +2,13 @@ N = int(input())
 
 # Please write your code here.
 
-cnt_val = 0
-
-def div_num(n):
-    global cnt_val
-
+def div_cnt(n) :
     if n == 1 :
-        return 
-    cnt_val += 1
+        return 0
     
     if n % 2 == 0 :
-        return div_num(n//2)
+        return div_cnt(n//2) + 1
     else :
-        return div_num(n//3)
+        return div_cnt(n//3) + 1
 
-
-div_num(N)
-print(cnt_val)
+print(div_cnt(N))
