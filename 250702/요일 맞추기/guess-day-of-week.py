@@ -15,5 +15,7 @@ date1 += d1
 date2 += d2
 
 diff = date2 - date1 
+while diff < 0:
+    diff += 7
 
 print(dow[diff % 7])
