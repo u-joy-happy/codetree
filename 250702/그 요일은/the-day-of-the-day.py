@@ -15,7 +15,7 @@ for i in range(1, 13):
 date1 += d1
 date2 += d2
 
-date_diff = date2 - date1 + 2
-dow_diff = dow.index(A)
+dow_diff = 7 - dow.index(A)
+date_diff = date2 - date1 + dow_diff
 
 print(date_diff//7)
