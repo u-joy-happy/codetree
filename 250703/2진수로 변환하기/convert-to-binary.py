@@ -5,8 +5,8 @@ n = int(input())
 digit = []
 
 while True :
-    if n == 1 :
-        digit.append(1)
+    if n <= 1 :
+        digit.append(n)
         break
     
     digit.append(n % 2)
