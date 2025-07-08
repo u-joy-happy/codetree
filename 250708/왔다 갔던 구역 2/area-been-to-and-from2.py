@@ -14,12 +14,12 @@ cur = 1000
 
 for i in range(n):
     if dir[i] == 'R' :
-        for j in range(cur, cur+x[i]) :
+        for j in range(cur+1, cur+x[i]+1) :
             if arr[j] < 2 :
                 arr[j] += 1
         cur = cur + x[i]
     else :
-        for j in range(cur-x[i]+1, cur+1) :
+        for j in range(cur-x[i], cur) :
             if arr[j] < 2 :
                 arr[j] += 1
         cur = cur - x[i]
