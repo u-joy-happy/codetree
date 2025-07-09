@@ -16,11 +16,11 @@ for i in range(n):
     if dir[i] == 'R' :
         for idx in range(cur, cur + x[i]):
             arr[idx][0] += 1
-            arr[idx][2] = 'w'
+            arr[idx][2] = 'b'
     else :
         for idx in range(cur, cur - x[i], -1):
             arr[idx][1] += 1
-            arr[idx][2] = 'b'
+            arr[idx][2] = 'w'
     cur = idx
 
 w_cnt = 0
