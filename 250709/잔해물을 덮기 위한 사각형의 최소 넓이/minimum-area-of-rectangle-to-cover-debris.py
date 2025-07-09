@@ -19,11 +19,16 @@ for y_axis in range(len(arr)) :
     for x_axis in range(len(arr[y_axis])) :
         if arr[y_axis][x_axis] == 0 :
             continue
-        if x_axis <= min_x and y_axis <= min_y :
-            min_x = x_axis
-            min_y = y_axis
-        if x_axis >= max_x and y_axis >= max_y :
-            max_x = x_axis
-            max_y = y_axis
 
-print((max_x - min_x +1) * (max_y - min_y +1))
+        if x_axis <= min_x :
+            min_x = x_axis
+        if y_axis <= min_y :
+            min_y = y_axis
+
+        if x_axis >= max_x :
+            max_x = x_axis + 1
+        if y_axis >= max_y :
+            max_y = y_axis + 1
+
+if min_x == 2000 and min_y == 2000 and max_x == 0 and max_y == 0 : print(0)
+else : print((max_x - min_x) * (max_y - min_y))
