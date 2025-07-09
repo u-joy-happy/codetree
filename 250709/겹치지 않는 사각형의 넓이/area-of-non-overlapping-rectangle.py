@@ -9,15 +9,17 @@ x1[2], y1[2], x2[2], y2[2] = map(int, input().split())
 
 # Please write your code here.
 
+OFFSET = 1000
+
 arr = [[0 for _ in range(2 * 1000 + 1)] for _ in range(2 * 1000 + 1)]
 
 for i in range(3):
     for y in range(y1[i], y2[i]):
         for x in range(x1[i], x2[i]):
             if i == 2 :
-                arr[y][x] = 0
+                arr[y+OFFSET][x+OFFSET] = 0
             else :
-                arr[y][x] = 1
+                arr[y+OFFSET][x+OFFSET] = 1
 
 sum_val = 0
 for item in arr :
