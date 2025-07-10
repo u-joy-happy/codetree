@@ -5,10 +5,11 @@ student = [int(input()) for _ in range(M)]
 
 arr = [K] * N
 
-for i in range(M) :
-    arr[student[i]-1] -= 1
-    if arr[student[i]-1] == 0 :
-        print(student[i])
+res = -1
+for i in student :
+    arr[i-1] -= 1
+    if arr[i-1] == 0 :
+        res = i
         break
-    elif i == M-1 :
-        print(-1)
+
+print(res)
