@@ -8,7 +8,7 @@ arr = [K] * N
 for i in range(M) :
     arr[student[i]-1] -= 1
     if arr[student[i]-1] == 0 :
-        print(arr[student[i]])
+        print(student[i])
         break
-    elif arr[student[i]-1] != 0 and i == M-1 :
+    elif i == M-1 :
         print(-1)
