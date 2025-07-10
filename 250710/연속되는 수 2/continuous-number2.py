@@ -10,10 +10,10 @@ for i in range(n) :
     if i == 0 or arr[i] == arr[i-1] :
         cnt += 1
     else :
-        if cnt >= max_cnt :
-            max_cnt = cnt
         cnt = 1
-
+    if cnt >= max_cnt :
+        max_cnt = cnt
+        
 print(max_cnt)
 
     
