@@ -36,6 +36,9 @@ for i in range(len(at)) :
     a_sum += at[i]
     b_sum += bt[i]
 
+    if a_sum == b_sum :
+        continue
+        
     tmp = first
     first = 'a' if a_sum > b_sum else 'b'
     if tmp != first : res += 1
