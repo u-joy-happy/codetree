@@ -10,4 +10,5 @@ for i in range(M) :
     if arr[student[i]-1] == 0 :
         print(arr[student[i]])
         break
-
+    elif arr[student[i]-1] != 0 and i == M-1 :
+        print(-1)
