@@ -8,7 +8,7 @@ dy = [0, 1, 0, -1]
 dir_num = 0
 x, y = 0, 0
 
-res, time = 0, 0
+res, time = -1, 0
 
 for com in commands:
     if com == 'L' :
