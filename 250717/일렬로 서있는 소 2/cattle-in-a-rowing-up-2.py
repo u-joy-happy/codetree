@@ -8,11 +8,7 @@ max_val = 0
 
 for i in range(N):
     for j in range(i, N):
-        if A[j] > max_val:
-            max_val = A[j]
-            cnt += 1
-    if cnt >= 3 :
-        res += 1
-    cnt, max_val = 0, 0
+        for k in range(j, N):
+            print(i, j, k)
 
-print(res)
+# print(res)
