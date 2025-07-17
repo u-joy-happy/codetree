@@ -3,12 +3,12 @@ A = list(map(int, input().split()))
 
 # Please write your code here.
 
-cnt, res = 0, 0
-max_val = 0
+res = 0
 
 for i in range(N):
-    for j in range(i, N):
-        for k in range(j, N):
-            print(i, j, k)
+    for j in range(i+1, N):
+        for k in range(j+1, N):
+            if A[i] <= A[j] <= A[k] :
+                res +=1
 
-# print(res)
+print(res)
