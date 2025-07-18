@@ -1,6 +1,7 @@
 a = input()
 
 # Please write your code here.
+import sys
 
 def to_decimal(num):
     res = 0
@@ -8,13 +9,13 @@ def to_decimal(num):
         res = (res * 2) + int(n)
     return res
 
-flag = True
-bi = ''
-for i in a:
-    if i == '0' and flag :
-        bi += '1'
-        flag = False
+max_int = -sys.maxsize
+for i in range(len(a)) :
+    list_val = list(a)
+    if list_val[i] == '0' :
+        list_val[i] = '1'
     else :
-        bi += i
+        list_val[i] = '0'
+    max_int = max(max_int, to_decimal(''.join(list_val)))
 
-print(to_decimal(bi))
+print(max_int)
