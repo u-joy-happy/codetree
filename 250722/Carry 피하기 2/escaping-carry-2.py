@@ -22,4 +22,4 @@ for i in range(n):
             if sum_if(a, b, c) :
                 max_val = max(max_val, a+b+c)
 
-print(max_val)
+print(max(res, max_val))
