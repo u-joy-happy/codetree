@@ -6,9 +6,7 @@ import sys
 max_val = -sys.maxsize
 
 for i in range(n):
-    for j in range(i+1, n):
-        if abs(i - j) == 1 :
-            continue
+    for j in range(i+2, n):
         max_val = max(max_val, numbers[i]+numbers[j])
 
 print(max_val)
