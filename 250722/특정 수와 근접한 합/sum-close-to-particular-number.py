@@ -5,11 +5,9 @@ arr = list(map(int, input().split()))
 import sys
 res = sys.maxsize
 
-sum_val = sum(arr)
-
 for i in range(N):
-    for j in range(i, N):
-        sum_val = sum_val - arr[i] - arr[j]
+    for j in range(i+1, N):
+        sum_val = sum(arr) - arr[i] - arr[j]
         res = min(abs(S - sum_val), res)
 
 print(res)
