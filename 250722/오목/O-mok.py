@@ -8,14 +8,17 @@ dy = [1, -1, 0, 0, 1, -1, 1, -1]
 x, y = 0, 0
 res = 0
 
+def in_range(x, y):
+    return x >= 0 and x < 19 and y >= 0 and y < 19
+
 def check(i, j, color):
     global x, y
     for n in range(8):
         nx, ny = i + dx[n], j + dy[n]
-        if color == board[nx][ny] :
+        if in_range(nx,ny) and color == board[nx][ny] :
             for m in range(5):
                 nx, ny = i + dx[n] * m, j + dy[n] * m
-                if color != board[nx][ny]:
+                if not in_range(nx,ny) or color != board[nx][ny]:
                     return False
             x, y = (i + nx) // 2, (j + ny) // 2
             return True
