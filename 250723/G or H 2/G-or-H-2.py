@@ -18,7 +18,7 @@ for i in range(len(arr)):
         for k in range(i, j+1):
             if arr[k] == 'G' : g_cnt += 1
             elif arr[k] == 'H' : h_cnt += 1
-        if g_cnt == h_cnt :
+        if g_cnt == h_cnt or g_cnt == 0 or h_cnt == 0:
             max_val = max(max_val, j-i)
 
 print(max_val)
