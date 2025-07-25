@@ -2,6 +2,7 @@ arr = list(map(int, input().split()))
 
 # Please write your code here.
 
+flag = False
 res = 2 * 1000
 
 for i in range(5):
@@ -20,5 +21,6 @@ for i in range(5):
                     diff = max_val - min_val
                     if res > diff:
                         res = diff
+                        flag = True
 
-print(res)
+print(res if flag else -1)
