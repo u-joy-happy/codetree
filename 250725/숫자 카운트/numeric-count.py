@@ -9,8 +9,6 @@ for _ in range(n):
 # Please write your code here.
 
 def check(num1, num2, cnt1, cnt2):
-    if cnt1 == 0 and cnt2 == 0 :
-        return False
     n1 = []
     n2 = []
     for i in range(3):
@@ -19,14 +17,14 @@ def check(num1, num2, cnt1, cnt2):
         num1 //= 10
         num2 //= 10
 
-    if cnt1 > 0 :
+    if cnt1 >= 0 :
         s_cnt = 0
         if n1[0] == n2[0] : s_cnt += 1
         if n1[1] == n2[1] : s_cnt += 1
         if n1[2] == n2[2] : s_cnt += 1
         if s_cnt != cnt1 : 
             return False
-    if cnt2 > 0 :
+    if cnt2 >= 0 :
         b_cnt = 0
         if n1[0] == n2[1] or n1[0] == n2[2] : b_cnt +=1
         if n1[1] == n2[0] or n1[1] == n2[2] : b_cnt +=1
@@ -49,5 +47,5 @@ for i in range(1,10):
                     break
             if flag:
                 res += 1
-
+                
 print(res)
