@@ -15,18 +15,18 @@ for _ in range(S):
 
 # Please write your code here.
 
-arr = [0] * (M + 1)
-arr2 = [0] * (M + 1)
+cheese_arr = [0] * (M+1)
 for i in range(D):
     for j in range(S):
         if p[i] == sick_p[j] and t[i] < sick_t[j] :
-            arr[m[i]] += 1
+            cheese_arr[m[i]] += 1
 
-for k in range(D):
-    if arr[m[k]] == S:
-        arr2[m[k]] += 1
+print(cheese_arr)
 
 
-print(max(arr2))
+arr = [0] * (N + 1)
+for n in range(D):
+    if cheese_arr[m[n]] == S :
+        arr[p[n]] = 1
 
-            
+print(sum(arr))
