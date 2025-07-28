@@ -15,15 +15,16 @@ for _ in range(S):
 
 # Please write your code here.
 
-cheese_arr = [0] * (M+1)
+bad_cheese = []
 for i in range(D):
     for j in range(S):
         if p[i] == sick_p[j] and t[i] < sick_t[j] :
-            cheese_arr[m[i]] += 1
+            bad_cheese.append(m[i])
 
-arr = [0] * (N + 1)
-for n in range(D):
-    if cheese_arr[m[n]] >= S :
-        arr[p[n]] = 1
+res = [0] * (N + 1)
+for i in range(D):
+    for j in range(S):
+        if p[i] == sick_p[j] or m[i] in bad_cheese:
+            res[p[i]] = 1
 
-print(sum(arr))
+print(sum(res))
