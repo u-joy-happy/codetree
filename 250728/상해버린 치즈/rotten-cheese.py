@@ -23,7 +23,7 @@ for i in range(D):
 
 arr = [0] * (N + 1)
 for n in range(D):
-    if cheese_arr[m[n]] == S :
+    if cheese_arr[m[n]] >= S :
         arr[p[n]] = 1
 
 print(sum(arr))
