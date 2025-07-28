@@ -21,9 +21,6 @@ for i in range(D):
         if p[i] == sick_p[j] and t[i] < sick_t[j] :
             cheese_arr[m[i]] += 1
 
-print(cheese_arr)
-
-
 arr = [0] * (N + 1)
 for n in range(D):
     if cheese_arr[m[n]] == S :
