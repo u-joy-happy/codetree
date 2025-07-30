@@ -50,6 +50,7 @@ class DoubleLinkedList:
             next_node.prev = node.prev
             node.prev = None
             node.next = None
+        return next_node
     
     def insert(self, node, data):
         if node == self.begin() :
@@ -84,7 +85,7 @@ for i in range(m):
             itl = itl.next
     elif cmd == 'D':
         if itl != dll.end():
-            dll.erase(itl)
+            itl = dll.erase(itl)
     elif cmd == 'P':
         dll.insert(itl, commands[i][1])
 
