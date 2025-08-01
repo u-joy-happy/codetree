@@ -7,16 +7,16 @@ a, b, c = list(a), list(b), list(c)
 
 max_val = 0
 res = -1
-for x in range(3):
+for x in range(1, 4):
     tot = 0
-    arr = [0] * 3
+    arr = [0] * 4
     arr[x] = 1
     for i in range(n):
-        arr[a[i]-1], arr[b[i]-1] = arr[b[i]-1], arr[a[i]-1]
-        if arr[c[i]-1] == 1:
+        arr[a[i]], arr[b[i]] = arr[b[i]], arr[a[i]]
+        if arr[c[i]] == 1:
             tot += 1
-    if tot > max_val:
+    if tot >= max_val:
         max_val = tot
-        res = x + 1
+        res = x 
 
 print(res)
