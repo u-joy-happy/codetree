@@ -6,7 +6,6 @@ a, b, c = list(a), list(b), list(c)
 # Please write your code here.
 
 max_val = 0
-res = -1
 for x in range(1, 4):
     tot = 0
     arr = [0] * 4
@@ -17,6 +16,5 @@ for x in range(1, 4):
             tot += 1
     if tot >= max_val:
         max_val = tot
-        res = x 
 
-print(res)
+print(max_val)
