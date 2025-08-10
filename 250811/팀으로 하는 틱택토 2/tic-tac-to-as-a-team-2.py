@@ -2,9 +2,9 @@ inp = [input() for _ in range(3)]
 
 # Please write your code here.
 
-def check(v1, v2, v3):
-    return (v1 == v2 != v3) or (v1 == v3 != v2) or (v2 == v3 != v1)
-
+def check(arr):
+    return len(set(arr)) == 2
+    
 dx, dy = [0, 1, 1, 1], [1, 0, 1, -1]
 
 cnt = 0
@@ -25,6 +25,6 @@ for i in range(3):
             for k in range(3):
                 nx, ny = i + dx[d] * k, j + dy[d] * k
                 val.append(inp[nx][ny])
-            if check(val[0], val[1], val[2]) :
+            if check(val) :
                 cnt += 1
 print(cnt)
