@@ -3,7 +3,8 @@ inp = [input() for _ in range(3)]
 # Please write your code here.
 
 def check(arr):
-    return len(set(arr)) == 2
+    a, b, c = arr[0], arr[1], arr[2]
+    return (a == b != c) or (a == c != b) or (b == c != a)
     
 dx, dy = [0, 1, 1, 1], [1, 0, 1, -1]
 
