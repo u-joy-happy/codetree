@@ -2,8 +2,6 @@ inp = [input() for _ in range(3)]
 
 # Please write your code here.
 
-dx, dy = [1, 1], [1, -1]
-
 cnt = 0
 
 def check(n, i, j):
@@ -17,21 +15,21 @@ def check(n, i, j):
 
 for i in range(1, 10) :
     for j in range(i + 1, 10) :
-
+        
         flag = False 
 
         crs_str1 = ''
         for m in range(3) :
-            nx, ny = 0 + (dx[0] * m), 0 + (dy[0] * m) 
+            nx, ny = 0 + (1 * m), 0 + (1 * m) 
             crs_str1 += inp[nx][ny]
-        
-        crs_str2 = ''
-        for m in range(3) :
-            nx, ny = 0 + (dx[1] * m), 2 + (dy[1] * m) 
-            crs_str2 += inp[nx][ny]
 
         if check(crs_str1, i, j):
             flag = True
+        
+        crs_str2 = ''
+        for m in range(3) :
+            nx, ny = 0 + (1 * m), 2 + (-1 * m) 
+            crs_str2 += inp[nx][ny]
             
         if check(crs_str2, i, j):
             flag = True
