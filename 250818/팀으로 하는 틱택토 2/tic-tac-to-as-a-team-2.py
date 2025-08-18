@@ -28,6 +28,24 @@ for i in range(1, 10) :
         for m in range(3) :
             nx, ny = 0 + (dx[1] * m), 2 + (dy[1] * m) 
             crs_str2 += inp[nx][ny]
+
+        if check(crs_str1, i, j):
+            flag = True
+        else :
+            flag = False
+        
+        if flag :
+            cnt += 1
+            break 
+            
+        if check(crs_str2, i, j):
+            flag = True
+        else :
+            flag = False
+        
+        if flag :
+            cnt += 1
+            break 
         
         for n in range(3):
             ver_str = ''
@@ -41,18 +59,6 @@ for i in range(1, 10) :
                 flag = False
 
             if check(ver_str, i, j):
-                flag = True
-                break
-            else :
-                flag = False
-
-            if check(crs_str1, i, j):
-                flag = True
-                break
-            else :
-                flag = False
-                
-            if check(crs_str2, i, j):
                 flag = True
                 break
             else :
