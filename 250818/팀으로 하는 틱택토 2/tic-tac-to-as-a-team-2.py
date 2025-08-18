@@ -5,7 +5,6 @@ inp = [input() for _ in range(3)]
 dx, dy = [1, 1], [1, -1]
 
 cnt = 0
-flag = True 
 
 def check(n, i, j):
     i, j = str(i), str(j)
@@ -19,6 +18,8 @@ def check(n, i, j):
 for i in range(1, 10) :
     for j in range(i + 1, 10) :
 
+        flag = False 
+
         crs_str1 = ''
         for m in range(3) :
             nx, ny = 0 + (dx[0] * m), 0 + (dy[0] * m) 
@@ -31,21 +32,9 @@ for i in range(1, 10) :
 
         if check(crs_str1, i, j):
             flag = True
-        else :
-            flag = False
-        
-        if flag :
-            cnt += 1
-            break 
             
         if check(crs_str2, i, j):
             flag = True
-        else :
-            flag = False
-        
-        if flag :
-            cnt += 1
-            break 
         
         for n in range(3):
             ver_str = ''
@@ -54,15 +43,9 @@ for i in range(1, 10) :
 
             if check(inp[n], i, j) :
                 flag = True
-                break
-            else :
-                flag = False
 
             if check(ver_str, i, j):
                 flag = True
-                break
-            else :
-                flag = False
         
         if flag :
             cnt += 1
