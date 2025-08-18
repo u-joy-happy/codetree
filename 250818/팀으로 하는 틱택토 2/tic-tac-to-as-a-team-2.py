@@ -12,6 +12,7 @@ def check(n, i, j):
         return False
     elif (n[0] == i or n[0] == j) and (n[1] == i or n[1] == j) and (n[2] == i or n[2] == j) :
         return True
+    return False
 
 for i in range(1, 10) :
     for j in range(i + 1, 10) :
