@@ -6,7 +6,7 @@ adjacent = list(map(int, input().split()))
 def check(arr) :
     for i in range(len(arr)):
         for j in range(i+1, len(arr)):
-            if arr[i] == arr[j]:
+            if arr[i] == arr[j] or arr[i] <= 0 or arr[j] <= 0:
                 return False
     return True
 
