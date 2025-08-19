@@ -10,6 +10,6 @@ for i in range(n):
     sum_val = 0
     for j in range(m):
         sum_val += arr[idx]
-        idx = arr[idx] -1
+        idx = arr[idx]
     max_val = max(max_val, sum_val)
 print(max_val)
