@@ -11,14 +11,14 @@ for i in range(N-K):
     idx = 0
     for x in range(len(arr)):
         cnt = 0
-        for y in range(x, len(arr)):
+        for y in range(x+1, len(arr)):
             if arr[x] == arr[y] :
                 cnt += 1
                 idx = arr[x]
         if cnt > max_cnt : 
             max_cnt = cnt
             max_idx = idx
-        elif cnt == max_cnt and idx > max_idx :
+        elif cnt == max_cnt and idx > max_idx and cnt > 0:
             max_idx = idx 
 
 print(max_idx)
