@@ -15,10 +15,10 @@ for i in range(N-K):
             if arr[x] == arr[y] :
                 cnt += 1
                 idx = arr[x]
-        if cnt == max_cnt : 
-            max_idx = idx
-        elif cnt > max_cnt : 
-            max_idx = idx
+        if cnt > max_cnt : 
             max_cnt = cnt
+            max_idx = idx
+        elif cnt == max_cnt and idx > max_idx :
+            max_idx = idx 
 
 print(max_idx)
