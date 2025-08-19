@@ -1,27 +1,22 @@
 N = int(input())
-seat = input()
+seat = list( input())
 
 # Please write your code here.
 
 max_val = 0
-prev = -1
+
+def min_dist() :
+    dist = N
+    for i in range(N):
+        for j in range(i+1, N):
+            if seat[i] == '1' and seat[j] == '1':
+                dist = min(dist, j - i)
+    return dist
 
 for i in range(N):
-    next = -1
-    if seat[i] == '1':
-        prev = i
-        continue
-    for j in range(i, N) :
-        if seat[j] == '1' :
-            next = j
-            break
-
-    if prev < 0 :
-        diff = next
-    elif next < 0 :
-        diff = (N-1) - prev
-    else:
-        diff = min(i - prev, next - i)
-    max_val = max(max_val, diff)
+    if seat[i] == '0':
+        seat[i] = '1'
+        max_val = max(max_val, min_dist())
+        seat[i] = '0'
 
 print(max_val)
